@@ -30,7 +30,7 @@ class BoggleSolver extends Component {
   }
 
   handleError() {
-    document.querySelector("#words").innerHTML = "Input should only contain letters a - z"
+    document.querySelector("#words").innerHTML = "Input should only contain letters a - z";
   }
 
   inputError(boardStrings) {
@@ -53,7 +53,7 @@ class BoggleSolver extends Component {
     if (this.inputError(boardStrings)) {
       this.handleError();
     } else {
-      let board = this.createBoard(boardStrings)
+      let board = this.createBoard(boardStrings);
       let words = solver.findAllWords(board);
       let result = words.length === 0 ? "No words can be formed from this input" : words.join(", ");
       document.querySelector("#words").innerHTML = result;
@@ -64,7 +64,7 @@ class BoggleSolver extends Component {
     event.preventDefault();
 
     this.setState(this.defaultState);
-    document.querySelector("#words").innerHTML = ""
+    document.querySelector("#words").innerHTML = "";
   }
 
   render() {

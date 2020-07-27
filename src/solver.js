@@ -11,7 +11,7 @@ const solver = {
     for (i = 0; i < board.length; i += 1) {
       for (j = 0; j < board[0].length; j += 1) {
         let words = this.findWords(board, dictionary, [i, j]);
-        result = result.concat(words)
+        result = result.concat(words);
       }
     }
 
@@ -28,14 +28,14 @@ const solver = {
 
     while (queue.length > 0) {
       const currentValue = queue.pop();
-      const currentString = currentValue[0]
+      const currentString = currentValue[0];
       const visitedCoordinates = currentValue[1];
       const lastCoordinates = visitedCoordinates[visitedCoordinates.length - 1];
       const neighbors = this.listNeighbors(lastCoordinates);
 
       neighbors.forEach(newCoordinates => {
-        const v = newCoordinates[0]
-        const h = newCoordinates[1]
+        const v = newCoordinates[0];
+        const h = newCoordinates[1];
 
         if (this.legitimateCoordinates(v, h) && !visitedCoordinates.includes(newCoordinates)) {
           let newString = currentString + board[v][h];
