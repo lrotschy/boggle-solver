@@ -19,6 +19,11 @@ Generates all English words that can be created from the letters in a given stri
 ## Deployment
 https://boggle-generator.herokuapp.com/
 
+## To-Dos/Should haves 
+
+- Break out form and inputs into separate components 
+- Create a testing suite
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
 
